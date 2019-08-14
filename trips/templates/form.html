@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<a href="/trips">Back</a> </li>
+<form action="{{action}}" method="post"> 
+    {% csrf_token %}
+    {{form.as_p}}
+    <div class=""> 
+        <input type='submit' name='submit' value='submit'> 
+    </div> 
+</form> 
+{% endblock %}

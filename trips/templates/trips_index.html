@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block title %}
+Trips 
+{% endblock %}
+{% block content %}
+    <ul> 
+        {% for trip in trips %}
+            <li>
+                <a class='' href="/trips/{{trip.pk}}"> {{trip.location}} </a> 
+            </li>
+        {% endfor %}
+    </ul> 
+    <a href="/trips/new"> New Trip </a> 
+
+{% endblock%}
